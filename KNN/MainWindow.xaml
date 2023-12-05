@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KNN"
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="KNN classifier" Height="600" Width="900"
+        MinHeight="600" MinWidth="900">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>
@@ -37,9 +39,10 @@
                 </DataGrid>
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
+                    <oxy:PlotView x:Name="Plot" Grid.Row="0"/>
                 </Grid>
             </Grid>
             <Grid Grid.Row="1">
@@ -57,11 +60,11 @@
                 </Grid.ColumnDefinitions>
                 <DockPanel Grid.Column="0" VerticalAlignment="Center">
                     <Label Content="X:" VerticalAlignment="Center"/>
-                    <TextBox x:Name="XTextBox" VerticalAlignment="Center" Margin="0, 0, 20, 0"/>
+                    <TextBox x:Name="XTextBox" Text="-0.7" VerticalAlignment="Center" Margin="0, 0, 20, 0"/>
                 </DockPanel>
                 <DockPanel Grid.Column="1" VerticalAlignment="Center">
                     <Label Content="Y:" VerticalAlignment="Center"/>
-                    <TextBox x:Name="YTextBox" VerticalAlignment="Center" Margin="0, 0, 20, 0"/>
+                    <TextBox x:Name="YTextBox" Text="-0.5" VerticalAlignment="Center" Margin="0, 0, 20, 0"/>
                 </DockPanel>
                 <DockPanel Grid.Column="2" Margin="30, 5, 30, 5">
                     <Button Grid.Column="2" Content="Clasificar" Click="ClasificarButtonClick"/>
