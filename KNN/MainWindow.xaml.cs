@@ -20,5 +20,10 @@ namespace KNN
         {
             InitializeComponent();
         }
+
+        private void ClasificarButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
