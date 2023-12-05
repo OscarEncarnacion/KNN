@@ -28,11 +28,11 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
-                <DataGrid x:Name="DatosDataGrid" AutoGenerateColumns="False">
+                <DataGrid x:Name="DatosDataGrid" AutoGenerateColumns="False" SelectionUnit="Cell">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="X" Binding="{Binding X}"/>
-                        <DataGridTextColumn Header="Y" Binding="{Binding Y}"/>
-                        <DataGridTextColumn Header="Clasificación" Binding="{Binding Etiqueta}"/>
+                        <DataGridTextColumn Width="*" Header="X" Binding="{Binding X}"/>
+                        <DataGridTextColumn Width="*" Header="Y" Binding="{Binding Y}"/>
+                        <DataGridTextColumn Width="3*" Header="Clasificación" Binding="{Binding Etiqueta}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Column="1">
@@ -43,7 +43,10 @@
                 </Grid>
             </Grid>
             <Grid Grid.Row="1">
-                <Label Content="Ingreselos datos del nuevo punto a clasificar." HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <DockPanel VerticalAlignment="Center">
+                    <Label Content="Ingrese los datos del nuevo punto a clasificar.      K:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBox x:Name="KTextBox" Text="3" VerticalAlignment="Center" HorizontalAlignment="Left" Width="30" Margin="5, 0, 0, 0"/>
+                </DockPanel>
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -61,7 +64,7 @@
                     <TextBox x:Name="YTextBox" VerticalAlignment="Center" Margin="0, 0, 20, 0"/>
                 </DockPanel>
                 <DockPanel Grid.Column="2" Margin="30, 5, 30, 5">
-                    <Button Grid.Column="2" Content="Clsificar" Click="ClasificarButtonClick"/>
+                    <Button Grid.Column="2" Content="Clasificar" Click="ClasificarButtonClick"/>
                 </DockPanel>
                 <DockPanel Grid.Column="3" VerticalAlignment="Center">
                     <Label Content="Resultado:" VerticalAlignment="Center"/>
