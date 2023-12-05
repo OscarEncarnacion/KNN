@@ -28,7 +28,7 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
-                <DataGrid x:Name="DatosDataGrid" AutoGenerateColumns="False" SelectionUnit="Cell">
+                <DataGrid x:Name="DatosDataGrid" AutoGenerateColumns="False" SelectionUnit="Cell" CanUserAddRows="True">
                     <DataGrid.Columns>
                         <DataGridTextColumn Width="*" Header="X" Binding="{Binding X}"/>
                         <DataGridTextColumn Width="*" Header="Y" Binding="{Binding Y}"/>

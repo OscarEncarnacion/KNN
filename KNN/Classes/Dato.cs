@@ -1,15 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KNN.Classes
 {
-    internal class Dato(double x, double y, string etiqueta)
+    internal class Dato
     {
-        public double X { get; set; } = x;
-        public double Y { get; set; } = y;
-        public string Etiqueta { get; set; } = etiqueta;
+        public double X { get; set; }
+        public double Y { get; set; }
+        public string Etiqueta { get; set; }
+
+        // crear un constructor vacio
+        public Dato()
+        {
+            X = 0;
+            Y = 0;
+            Etiqueta = "";
+        }
+
+        public Dato(double x, double y, string etiqueta)
+        {
+            X = x;
+            Y = y;
+            Etiqueta = etiqueta;
+        }
     }
 }
